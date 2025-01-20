@@ -13,125 +13,47 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&amp;display=swap"
-      rel="stylesheet"
-    >
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
-      rel="stylesheet"
-    >
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
-      rel="stylesheet"
-    >
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
     <link href="lib/animate/animate.min.css" rel="stylesheet">
     <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
-    <!-- Bootstrap 5 (CDN) -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    >
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
     
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="51" style="background: var(--background); color: var(--text-color);">
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="51">
     <!-- Spinner Start -->
-    <div id="spinner"
-         class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
             <span class="sr-only">Loading...</span>
         </div>
     </div>
     <!-- Spinner End -->
 
-    <!-- Navbar Start -->
-    <nav class="navbar navbar-expand-lg bg-white navbar-light fixed-top shadow py-lg-0 px-4 px-lg-5 wow fadeIn"
-         data-wow-delay="0.1s">
-        <a href="index.html" class="navbar-brand d-block d-lg-none">
-            <h1 class="text-primary fw-bold m-0">DIPESH JOSHI</h1>
-        </a>
-        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-between py-4 py-lg-0" id="navbarCollapse">
-            <div class="navbar-nav ms-auto py-0">
-                <a href="#about" class="nav-item nav-link">About</a>
-                <a href="#skill" class="nav-item nav-link">Skills</a>
-            </div>
-            <a href="./" class="navbar-brand bg-secondary py-3 px-4 mx-3 d-none d-lg-block">
-                <h1 class="text-primary fw-bold m-0">DIPESH JOSHI</h1>
-            </a>
-            <div class="navbar-nav me-auto py-0">
-                <a href="#project" class="nav-item nav-link">Projects</a>
-                <a href="#contact" class="nav-item nav-link">Contact</a>
-            </div>
-        </div>
-    </nav>
-    <!-- Navbar End -->
-
-    <!-- Header Start -->
-    <div class="container-fluid bg-light my-6 mt-0" id="home">
-        <div class="container">
-            <div class="row g-5 align-items-center">
-                <div class="col-lg-6 py-6 pb-0 pt-lg-0">
-                    <h3 class="text-primary mb-3">Hello, I'm</h3>
-                    <h1 class="display-3 mb-3">Dipesh Joshi</h1>
-                    <h2 class="typed-text-output d-inline"></h2>
-                    <div class="typed-text d-none">
-                        Web Designer, Front End Developer, Web Developer, Back End Developer, Programmer
-                    </div>
-                    <div class="d-flex align-items-center pt-5">
-                        <a href="./Resume.pdf" target="_blank" class="btn btn-primary py-3 px-4 me-5">Download CV</a>
-                        <button
-                          type="button"
-                          class="btn-play"
-                          data-bs-toggle="modal"
-                          data-src="https://www.youtube.com/embed/qYWDQYXxOAg"
-                          data-bs-target="#videoModal"
-                        >
-                            <span></span>
-                        </button>
-                        <h5 class="ms-4 mb-0 d-none d-sm-block">Play Video</h5>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <img class="img-fluid" src="img/profile.png" alt="">
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Header End -->
+    <!-- Load partials using Fetch API -->
+    <div id="navbar-container"></div>
+    <div id="header-container"></div>
 
     <!-- Video Modal Start -->
     <div class="modal modal-video fade" id="videoModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content rounded-0">
                 <div class="modal-header">
-                    <button
-                      type="button"
-                      class="btn-close"
-                      data-bs-dismiss="modal"
-                      aria-label="Close"
-                    ></button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <div class="ratio ratio-16x9">
-                        <iframe
-                          class="embed-responsive-item"
-                          src=""
-                          id="video"
-                          allowfullscreen
-                          allowscriptaccess="always"
-                          allow="autoplay"
-                        ></iframe>
+                        <iframe class="embed-responsive-item" src="" id="video" allowfullscreen allowscriptaccess="always" allow="autoplay"></iframe>
                     </div>
                 </div>
             </div>
@@ -139,432 +61,18 @@
     </div>
     <!-- Video Modal End -->
 
-    <!-- About Start -->
-    <div class="container-xxl py-6" id="about">
-        <div class="container">
-            <div class="row g-5">
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="d-flex align-items-center mb-5">
-                        <div class="years flex-shrink-0 text-center me-4">
-                            <h1 class="display-1 mb-0">01</h1>
-                            <h5 class="mb-0">Year</h5>
-                        </div>
-                        <h3 class="lh-base mb-0">
-                          of working experience as a web developer
-                        </h3>
-                    </div>
-                    <p class="mb-4 text-justify">
-                        <b><i>My Name is Dipesh Joshi</i></b>, I have completed my Diploma
-                        from <b><i>Government Polytechnic Kashipur</i></b> in Computer Science And Engineering.
-                        I am seeking a beginner role to enhance my technical knowledge gained
-                        in the last three years. I have also participated in a Zonal level
-                        Hackathon at my college. I am looking for the start of my career
-                        to prove myself.
-                    </p>
-                </div>
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="d-flex align-items-center mb-3">
-                        <h5 class="border-end pe-3 me-3 mb-0">PERSONAL TRAITS</h5>
-                    </div>
-                    <ul>
-                        <li>Good team management and leadership skills.</li>
-                        <li>Ability to learn and to communicate with others.</li>
-                        <li>Hardworking and energetic.</li>
-                        <li>Able to work in diverse environments under pressure.</li>
-                    </ul>
-                    <hr>
-                    <div class="d-flex align-items-center mb-3">
-                        <h5 class="border-end pe-3 me-3 mb-0">HOBBIES</h5>
-                    </div>
-                    <ul>
-                        <li>Blogging</li>
-                        <li>Coding</li>
-                        <li>Listening to music</li>
-                        <li>Exploring new places</li>
-                        <li>Volunteerism</li>
-                        <li>Performing plays</li>
-                        <li>Learning about new technologies</li>
-                    </ul>
-                    <hr>
-                    <div class="d-flex align-items-center mb-3">
-                        <h5 class="border-end pe-3 me-3 mb-0">Projects Completed</h5>
-                        <h2 class="text-primary fw-bold mb-0" data-toggle="counter-up">2</h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- About End -->
-
-    <!-- Skills & Experience Start -->
-    <div class="container-xxl py-6 pb-5" id="skill">
-        <div class="container">
-            <div class="row g-5">
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <h1 class="display-5 mb-5">Skills &amp; Experience</h1>
-                    <h3 class="mb-4">My Skills</h3>
-                    <div class="row align-items-center">
-                        <div class="col-md-6">
-                            <div class="skill mb-4">
-                                <div class="d-flex justify-content-between">
-                                    <h6 class="font-weight-bold">HTML</h6>
-                                    <h6 class="font-weight-bold">85%</h6>
-                                </div>
-                                <div class="progress">
-                                    <div
-                                      class="progress-bar bg-primary"
-                                      role="progressbar"
-                                      aria-valuenow="85"
-                                      aria-valuemin="0"
-                                      aria-valuemax="100"
-                                      style="width: 85%;"
-                                    ></div>
-                                </div>
-                            </div>
-                            <div class="skill mb-4">
-                                <div class="d-flex justify-content-between">
-                                    <h6 class="font-weight-bold">CSS</h6>
-                                    <h6 class="font-weight-bold">55%</h6>
-                                </div>
-                                <div class="progress">
-                                    <div
-                                      class="progress-bar bg-warning"
-                                      role="progressbar"
-                                      aria-valuenow="55"
-                                      aria-valuemin="0"
-                                      aria-valuemax="100"
-                                      style="width: 55%;"
-                                    ></div>
-                                </div>
-                            </div>
-                            <div class="skill mb-4">
-                                <div class="d-flex justify-content-between">
-                                    <h6 class="font-weight-bold">PHP</h6>
-                                    <h6 class="font-weight-bold">90%</h6>
-                                </div>
-                                <div class="progress">
-                                    <div
-                                      class="progress-bar bg-danger"
-                                      role="progressbar"
-                                      aria-valuenow="90"
-                                      aria-valuemin="0"
-                                      aria-valuemax="100"
-                                      style="width: 90%;"
-                                    ></div>
-                                </div>
-                            </div>
-                            <div class="skill mb-4">
-                                <div class="d-flex justify-content-between">
-                                    <h6 class="font-weight-bold">SQL</h6>
-                                    <h6 class="font-weight-bold">70%</h6>
-                                </div>
-                                <div class="progress">
-                                    <div
-                                      class="progress-bar bg-success"
-                                      role="progressbar"
-                                      aria-valuenow="70"
-                                      aria-valuemin="0"
-                                      aria-valuemax="100"
-                                      style="width: 70%;"
-                                    ></div>
-                                </div>
-                            </div>
-                            <div class="skill mb-4">
-                                <div class="d-flex justify-content-between">
-                                    <h6 class="font-weight-bold">.NET</h6>
-                                    <h6 class="font-weight-bold">60%</h6>
-                                </div>
-                                <div class="progress">
-                                    <div
-                                      class="progress-bar bg-info"
-                                      role="progressbar"
-                                      aria-valuenow="60"
-                                      aria-valuemin="0"
-                                      aria-valuemax="100"
-                                      style="width: 60%;"
-                                    ></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="skill mb-4">
-                                <div class="d-flex justify-content-between">
-                                    <h6 class="font-weight-bold">Java</h6>
-                                    <h6 class="font-weight-bold">70%</h6>
-                                </div>
-                                <div class="progress">
-                                    <div
-                                      class="progress-bar bg-danger"
-                                      role="progressbar"
-                                      aria-valuenow="70"
-                                      aria-valuemin="0"
-                                      aria-valuemax="100"
-                                      style="width: 70%;"
-                                    ></div>
-                                </div>
-                            </div>
-                            <div class="skill mb-4">
-                                <div class="d-flex justify-content-between">
-                                    <h6 class="font-weight-bold">Next JS</h6>
-                                    <h6 class="font-weight-bold">50%</h6>
-                                </div>
-                                <div class="progress">
-                                    <div
-                                      class="progress-bar bg-dark"
-                                      role="progressbar"
-                                      aria-valuenow="50"
-                                      aria-valuemin="0"
-                                      aria-valuemax="100"
-                                      style="width: 50%;"
-                                    ></div>
-                                </div>
-                            </div>
-                            <div class="skill mb-4">
-                                <div class="d-flex justify-content-between">
-                                    <h6 class="font-weight-bold">WordPress</h6>
-                                    <h6 class="font-weight-bold">75%</h6>
-                                </div>
-                                <div class="progress">
-                                    <div
-                                      class="progress-bar bg-info"
-                                      role="progressbar"
-                                      aria-valuenow="75"
-                                      aria-valuemin="0"
-                                      aria-valuemax="100"
-                                      style="width: 75%;"
-                                    ></div>
-                                </div>
-                            </div>
-                            <div class="skill mb-4">
-                                <div class="d-flex justify-content-between">
-                                    <h6 class="font-weight-bold">MongoDB</h6>
-                                    <h6 class="font-weight-bold">65%</h6>
-                                </div>
-                                <div class="progress">
-                                    <div
-                                      class="progress-bar bg-warning"
-                                      role="progressbar"
-                                      aria-valuenow="65"
-                                      aria-valuemin="0"
-                                      aria-valuemax="100"
-                                      style="width: 65%;"
-                                    ></div>
-                                </div>
-                            </div>
-                            <div class="skill mb-4">
-                                <div class="d-flex justify-content-between">
-                                    <h6 class="font-weight-bold">Laravel</h6>
-                                    <h6 class="font-weight-bold">40%</h6>
-                                </div>
-                                <div class="progress">
-                                    <div
-                                      class="progress-bar"
-                                      role="progressbar"
-                                      aria-valuenow="40"
-                                      aria-valuemin="0"
-                                      aria-valuemax="100"
-                                      style="width: 40%; background:#6f42c1;"
-                                    ></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <ul class="nav nav-pills rounded border border-2 border-primary mb-5">
-                        <li class="nav-item w-50">
-                            <button class="nav-link w-100 py-3 fs-5 active" data-bs-toggle="pill"
-                                    href="#tab-1">Experience</button>
-                        </li>
-                        <li class="nav-item w-50">
-                            <button class="nav-link w-100 py-3 fs-5" data-bs-toggle="pill"
-                                    href="#tab-2">Education</button>
-                        </li>
-                    </ul>
-                    <div class="tab-content">
-                        <div id="tab-1" class="tab-pane fade show p-0 active">
-                            <div class="row gy-5 gx-4">
-                                <div class="col-sm-6">
-                                    <h5>Industrial Training in JAVA</h5>
-                                    <hr class="text-primary my-2">
-                                    <p class="text-primary mb-1">07/2019 - 08/2019</p>
-                                    <h6 class="mb-0">Sarya Technologies, Kashipur</h6>
-                                </div>
-                                <div class="col-sm-6">
-                                    <h5>Java Programming</h5>
-                                    <hr class="text-primary my-2">
-                                    <p class="text-primary mb-1">02/2020 - 09/2020</p>
-                                    <h6 class="mb-0">E-SDP by MSME Development Sitarganj</h6>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="tab-2" class="tab-pane fade p-0">
-                            <div class="row gy-5 gx-4">
-                                <div class="col-sm-6">
-                                    <h5>Higher Secondary School 10th</h5>
-                                    <hr class="text-primary my-2">
-                                    <p class="text-primary mb-1">04/2014 - 06/2015</p>
-                                    <h6 class="mb-0">S.V.M. Khatima</h6>
-                                </div>
-                                <div class="col-sm-6">
-                                    <h5>Higher Secondary School 12th</h5>
-                                    <hr class="text-primary my-2">
-                                    <p class="text-primary mb-1">04/2016 - 06/2017</p>
-                                    <h6 class="mb-0">S.V.M. Khatima</h6>
-                                </div>
-                                <div class="col-sm-6">
-                                    <h5>Diploma In Computer Science &amp; Engg</h5>
-                                    <hr class="text-primary my-2">
-                                    <p class="text-primary mb-1">08/2017 - 12/2020</p>
-                                    <h6 class="mb-0">Govt Polytechnic Kashipur</h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Projects Start -->
-    <div class="container-xxl py-6 pt-5" id="project">
-        <div class="container">
-            <div class="row g-5 mb-5 align-items-center wow fadeInUp" data-wow-delay="0.1s">
-                <div class="col-lg-6">
-                    <h1 class="display-5 mb-0">My Projects</h1>
-                </div>
-                <div class="col-lg-6 text-lg-end">
-                    <ul class="list-inline mx-n3 mb-0" id="portfolio-flters">
-                        <li class="mx-3 active" data-filter="*">All Projects</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="row g-4 portfolio-container wow fadeInUp" data-wow-delay="0.1s">
-                <div class="col-lg-4 col-md-6 portfolio-item">
-                    <div class="portfolio-img rounded overflow-hidden">
-                        <img
-                          class="img-fluid"
-                          style="width: auto; height: 200px;"
-                          src="img/indrastial.png"
-                          alt=""
-                        >
-                        <div class="portfolio-btn">
-                            <a
-                              class="btn btn-lg-square btn-outline-secondary border-2 mx-1"
-                              href="img/indrastial.png"
-                              data-lightbox="portfolio"
-                            >
-                                <i class="fa fa-eye"></i>
-                            </a>
-                            <a
-                              class="btn btn-lg-square btn-outline-secondary border-2 mx-1"
-                              href="https://github.com/dipesh227/RoomRent"
-                            >
-                                <i class="fa fa-link"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 portfolio-item">
-                    <div class="portfolio-img rounded overflow-hidden">
-                        <img
-                          class="img-fluid"
-                          style="width: auto; height: 200px;"
-                          src="img/minor.png"
-                          alt=""
-                        >
-                        <div class="portfolio-btn">
-                            <a
-                              class="btn btn-lg-square btn-outline-secondary border-2 mx-1"
-                              href="img/minor.png"
-                              data-lightbox="portfolio"
-                            >
-                                <i class="fa fa-eye"></i>
-                            </a>
-                            <a
-                              class="btn btn-lg-square btn-outline-secondary border-2 mx-1"
-                              href="https://github.com/dipesh227/hvc"
-                            >
-                                <i class="fa fa-link"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Add more project blocks as needed -->
-            </div>
-        </div>
-    </div>
-    <!-- Projects End -->
-
-    <!-- Contact Start -->
-    <div class="container-xxl pb-5" id="contact">
-        <div class="container py-5">
-            <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="col-lg-6">
-                    <h1 class="display-5 mb-0">Let's Work Together</h1>
-                </div>
-                <div class="col-lg-6 text-lg-end">
-                    <a
-                      class="btn btn-primary py-3 px-5"
-                      target="_blank"
-                      href="https://api.whatsapp.com/send?phone=918630484930&amp;text=hello%20i%20am%20come%20from%20your%20portfolio%20website%20are%20you%20intrased%20to%20work%20with%20us.&amp;source=&amp;data=&amp;app_absent="
-                    >
-                        <i class="fab fa-whatsapp"></i> Whatsapp
-                    </a>
-                </div>
-            </div>
-            <div class="row g-5">
-                <div class="col-lg-12 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <p class="mb-2">Address</p>
-                    <h3 class="fw-bold">Khatima, U.S.Nagar, Uttarakhand</h3>
-                    <hr class="w-100">
-                    <p class="mb-2">Call me:</p>
-                    <h3 class="fw-bold">+91 86304 84930</h3>
-                    <hr class="w-100">
-                    <p class="mb-2">Mail me:</p>
-                    <h3 class="fw-bold">dipeshjoshi227@gmail.com</h3>
-                    <hr class="w-100">
-                    <p class="mb-2">Follow me:</p>
-                    <div class="d-flex pt-2">
-                        <a
-                          class="btn btn-square btn-primary me-2"
-                          href="https://www.linkedin.com/in/dipesh-joshi-india/"
-                        >
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Contact End -->
-
-    <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-white py-4">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                    &copy; <a class="border-bottom text-secondary" href="/">DIPESH JOSHI</a>, All Right Reserved.
-                </div>
-                <div class="col-md-6 text-center text-md-end">
-                    Designed By <a class="border-bottom text-secondary" href="https://htmlcodex.com">HTML Codex</a>
-                    <br>Modified By: <a class="border-bottom" href="/" target="_blank">DIPESH JOSHI</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Footer End -->
+    <div id="about-container"></div>
+    <div id="skills-container"></div>
+    <div id="projects-container"></div>
+    <div id="contact-container"></div>
+    <div id="footer-container"></div>
 
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top">
-        <i class="bi bi-arrow-up"></i>
-    </a>
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
-    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="lib/wow/wow.min.js"></script>
     <script src="lib/easing/easing.min.js"></script>
     <script src="lib/waypoints/waypoints.min.js"></script>
@@ -576,65 +84,31 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+
+    <!-- Load Partials Script -->
+    <script>
+        // Function to load partial content
+        async function loadPartial(containerId, partialPath) {
+            try {
+                const response = await fetch(partialPath);
+                if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                const content = await response.text();
+                document.getElementById(containerId).innerHTML = content;
+            } catch (error) {
+                console.error('Error loading partial:', error);
+            }
+        }
+
+        // Load all partials when document is ready
+        document.addEventListener('DOMContentLoaded', () => {
+            loadPartial('navbar-container', 'partials/navbar.html');
+            loadPartial('header-container', 'partials/header.html');
+            loadPartial('about-container', 'partials/about.html');
+            loadPartial('skills-container', 'partials/skills.html');
+            loadPartial('projects-container', 'partials/projects.html');
+            loadPartial('contact-container', 'partials/contact.html');
+            loadPartial('footer-container', 'partials/footer.html');
+        });
+    </script>
 </body>
 </html>
-
-Hi 👋, I'm Dipesh Joshi
-Full Stack Developer | MERN Stack | Next.js | AI Enthusiast
-
-Portfolio LinkedIn GitHub WhatsApp
-Typing SVG
-🌟 About Me
-I'm a passionate Full Stack Developer specializing in the MERN Stack and Next.js. I love building scalable, modern, and user-friendly applications. Currently, I'm exploring AI-powered image generation and working on exciting projects that combine creativity and technology.
-
-🔭 Currently Working On: AI-powered image generation projects
-🌱 Learning: Advanced AI/ML techniques and cloud-native development
-💼 Available For: Freelance projects and collaborations
-📍 Location: Khatima, U.S.Nagar, Uttarakhand
-📧 Email: dipeshjoshi227@gmail.com
-📱 Phone: +91 86304 84930
-🚀 Featured Projects
-1. StableImg - AI Image Generator
-StableImg
-
-Description: An advanced AI image generation platform built with Next.js and cutting-edge AI technology.
-Features: User-friendly interface, responsive design, and state-of-the-art neural networks.
-2. QuizMentor
-QuizMentor
-
-Description: An interactive presentation and quiz platform inspired by Mentimeter.
-Features: Real-time audience engagement and modern web technologies.
-3. NPP Gadarpur
-NPP Gadarpur
-
-Description: A municipal corporation management system with custom CSS theming and dark mode support.
-Features: Responsive design and modern UI/UX.
-4. Image Maker AI
-Image Maker AI
-
-Description: An AI-powered image manipulation tool built with Next.js and TypeScript.
-Features: Custom font implementation and advanced theming system.
-💻 Tech Stack
-Frontend
-Next.js React TypeScript JavaScript HTML5 CSS3 Tailwind CSS
-
-Backend
-Node.js Express.js MongoDB PHP MySQL
-
-Tools & Technologies
-Git VS Code Postman Docker Vercel
-
-📊 GitHub Stats
-GitHub Stats GitHub Streak
-Top Languages
-🏆 GitHub Trophies
-GitHub Trophies
-📈 Activity Graph
-Activity Graph
-🤝 Let's Connect
-Portfolio: dipeshjoshi.vercel.app
-LinkedIn: Dipesh Joshi
-WhatsApp: +91 86304 84930
-Email: dipeshjoshi227@gmail.com
-GitHub Followers GitHub User's stars Profile Views
-💻 Created with ❤️ by Dipesh Joshi
