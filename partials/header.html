@@ -1,30 +1,28 @@
 <!-- Header Start -->
-<div class="container-fluid position-relative bg-light my-6 mt-0" id="home">
-    <div class="bg-header position-absolute top-0 start-0 w-100 h-100" style="background: url('../img/bg-header.png') center center no-repeat; background-size: cover; opacity: 0.1; z-index: 1;"></div>
-    <div class="container position-relative" style="z-index: 2;">
-        <div class="row g-5 align-items-center">
-            <div class="col-lg-6 py-6 pb-0 pt-lg-0">
+<div class="relative bg-gray-50 my-24 mt-0" id="home">
+    <div class="absolute inset-0 bg-cover bg-center opacity-10 z-[1]" style="background-image: url('../img/bg-header.png')"></div>
+    <div class="container mx-auto relative z-[2]">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="py-6 lg:py-0">
                 <h3 class="text-primary mb-3">Hello, I'm</h3>
-                <h1 class="display-3 mb-3">Dipesh Joshi</h1>
-                <h2 class="typed-text-output d-inline"></h2>
-                <div class="typed-text d-none">
+                <h1 class="text-5xl lg:text-6xl font-bold mb-3">Dipesh Joshi</h1>
+                <h2 class="typed-text-output inline"></h2>
+                <div class="typed-text hidden">
                     Full Stack Developer, MERN Developer, Next.js Developer, AI Enthusiast, Web Developer
                 </div>
                 <p class="mb-4 mt-4">🌟 Passionate Full Stack Developer specializing in MERN Stack and Next.js</p>
-                <div class="d-flex align-items-center pt-5">
-                    <a href="../Resume.pdf" target="_blank" class="btn btn-primary py-3 px-4 me-5">Download CV</a>
+                <div class="flex items-center pt-5">
+                    <a href="../Resume.pdf" target="_blank" class="bg-primary hover:bg-primary/90 text-white py-3 px-4 rounded-lg mr-5 transition-colors">Download CV</a>
                     <button type="button" class="btn-play" data-bs-toggle="modal" data-src="https://www.youtube.com/embed/qYWDQYXxOAg" data-bs-target="#videoModal">
                         <span></span>
                     </button>
-                    <h5 class="ms-4 mb-0 d-none d-sm-block">Play Video</h5>
+                    <h5 class="ml-4 mb-0 hidden sm:block">Play Video</h5>
                 </div>
             </div>
-            <div class="col-lg-6">
-                <div class="position-relative">
-                    <img class="img-fluid rounded-3 shadow-lg" src="../img/profile.png" alt="Dipesh Joshi Profile">
-                    <div class="position-absolute top-0 end-0 mt-n4 me-n4">
-                        <img src="../img/bg-icon.png" class="bg-icon" alt="Background Icon">
-                    </div>
+            <div class="relative">
+                <img class="w-full rounded-lg shadow-xl" src="../img/profile.png" alt="Dipesh Joshi Profile">
+                <div class="absolute -top-4 -right-4">
+                    <img src="../img/bg-icon.png" class="w-24 h-24" alt="Background Icon">
                 </div>
             </div>
         </div>

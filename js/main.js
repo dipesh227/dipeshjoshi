@@ -1,96 +1,79 @@
-(function ($) {
-    "use strict";
+// Spinner
+var spinner = function () {
+    setTimeout(function () {
+        if ($('#spinner').length > 0) {
+            $('#spinner').removeClass('show');
+        }
+    }, 1);
+};
+spinner();
 
-    // Spinner
-    var spinner = function () {
-        setTimeout(function () {
-            if ($('#spinner').length > 0) {
-                $('#spinner').removeClass('show');
-            }
-        }, 1);
-    };
-    spinner();
-    
-    // Initiate the wowjs
-    new WOW().init();
+// Initiate the wow.js animation library
+new WOW().init();
 
-    // Navbar on scrolling
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 300) {
-            $('.navbar').fadeIn('slow').css('display', 'flex');
+// Fixed Navbar
+$(window).scroll(function () {
+    if ($(window).width() < 992) {
+        if ($(this).scrollTop() > 45) {
+            $('.fixed-top').addClass('bg-white shadow');
         } else {
-            $('.navbar').fadeOut('slow').css('display', 'none');
+            $('.fixed-top').removeClass('bg-white shadow');
         }
-    });
-
-    // Smooth scrolling on the navbar links
-    $(".navbar-nav a").on('click', function (event) {
-        if (this.hash !== "") {
-            event.preventDefault();
-            $('html, body').animate({
-                scrollTop: $(this.hash).offset().top - 45
-            }, 1500, 'easeInOutExpo');
-        }
-    });
-
-    // Typed Initiate
-    if ($('.typed-text-output').length == 1) {
-        var typed_strings = $('.typed-text').text();
-        var typed = new Typed('.typed-text-output', {
-            strings: typed_strings.split(', '),
-            typeSpeed: 100,
-            backSpeed: 20,
-            smartBackspace: false,
-            loop: true
-        });
     }
+});
 
-    // Modal Video
-    var $videoSrc;
-    $('.btn-play').click(function () {
-        $videoSrc = $(this).data("src");
+// Skills tab functionality
+function toggleTab(tabId) {
+    // Remove active class from all tabs and hide all content
+    document.querySelectorAll('.tab-content > div').forEach(div => {
+        div.classList.add('hidden');
     });
-    $('#videoModal').on('shown.bs.modal', function (e) {
-        $("#video").attr('src', $videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0");
-    });
-    $('#videoModal').on('hide.bs.modal', function (e) {
-        $("#video").attr('src', $videoSrc);
-    });
-
-    // Facts counter
-    $('[data-toggle="counter-up"]').counterUp({
-        delay: 10,
-        time: 2000
+    document.querySelectorAll('.flex.rounded-lg.border-2 button').forEach(button => {
+        button.classList.remove('active', 'bg-primary', 'text-white');
+        button.classList.add('hover:bg-primary/10');
     });
 
-    // Skills
-    $('.skill').waypoint(function () {
-        $('.progress .progress-bar').each(function () {
-            $(this).css("width", $(this).attr("aria-valuenow") + '%');
-        });
-    }, {offset: '80%'});
+    // Show selected tab content and highlight selected tab
+    const selectedTab = document.getElementById(tabId);
+    const selectedButton = event.currentTarget;
+    selectedTab.classList.remove('hidden');
+    selectedButton.classList.add('active', 'bg-primary', 'text-white');
+    selectedButton.classList.remove('hover:bg-primary/10');
+}
 
-    // Portfolio isotope and filter
-    var portfolioIsotope = $('.portfolio-container').isotope({
-        itemSelector: '.portfolio-item',
-        layoutMode: 'fitRows'
+// Typed Initiate
+if ($('.typed-text-output').length == 1) {
+    var typed_strings = $('.typed-text').text();
+    var typed = new Typed('.typed-text-output', {
+        strings: typed_strings.split(', '),
+        typeSpeed: 100,
+        backSpeed: 20,
+        smartBackspace: false,
+        loop: true
     });
-    $('#portfolio-flters li').on('click', function () {
-        $("#portfolio-flters li").removeClass('active');
-        $(this).addClass('active');
-        portfolioIsotope.isotope({filter: $(this).data('filter')});
-    });
+}
 
-    // Back to top button
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 300) {
-            $('.back-to-top').fadeIn('slow');
-        } else {
-            $('.back-to-top').fadeOut('slow');
-        }
-    });
-    $('.back-to-top').click(function () {
-        $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
-        return false;
-    });
-})(jQuery);
+// Back to top button functionality
+$(window).scroll(function () {
+    if ($(this).scrollTop() > 100) {
+        $('.back-to-top').fadeIn('slow');
+    } else {
+        $('.back-to-top').fadeOut('slow');
+    }
+});
+$('.back-to-top').click(function () {
+    $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
+    return false;
+});
+
+// Portfolio isotope and filter
+var portfolioIsotope = $('.portfolio-container').isotope({
+    itemSelector: '.portfolio-item',
+    layoutMode: 'fitRows'
+});
+$('#portfolio-flters li').on('click', function () {
+    $("#portfolio-flters li").removeClass('active');
+    $(this).addClass('active');
+
+    portfolioIsotope.isotope({filter: $(this).data('filter')});
+});

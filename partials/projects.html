@@ -1,31 +1,31 @@
 <!-- Projects Start -->
-<div class="container-xxl py-6 pt-5" id="project">
-    <div class="container">
-        <div class="row g-5 mb-5 align-items-center wow fadeInUp" data-wow-delay="0.1s">
-            <div class="col-lg-6">
-                <h1 class="display-5 mb-0">My Projects</h1>
+<div class="container mx-auto py-24 pt-20" id="project">
+    <div class="max-w-7xl mx-auto px-4">
+        <div class="flex flex-col lg:flex-row items-center justify-between mb-12 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="lg:w-1/2 mb-8 lg:mb-0">
+                <h1 class="text-4xl lg:text-5xl font-bold">My Projects</h1>
             </div>
-            <div class="col-lg-6 text-lg-end">
-                <ul class="list-inline mx-n3 mb-0" id="portfolio-flters">
-                    <li class="mx-3 active" data-filter="*">All Projects</li>
-                    <li class="mx-3" data-filter=".ai">AI</li>
-                    <li class="mx-3" data-filter=".web">Web</li>
+            <div class="lg:w-1/2 lg:text-right">
+                <ul class="flex flex-wrap justify-center lg:justify-end gap-6" id="portfolio-flters">
+                    <li class="text-lg font-medium text-gray-800 hover:text-primary cursor-pointer border-b-2 border-transparent hover:border-primary transition-colors mx-3 active" data-filter="*">All Projects</li>
+                    <li class="text-lg font-medium text-gray-800 hover:text-primary cursor-pointer border-b-2 border-transparent hover:border-primary transition-colors mx-3" data-filter=".ai">AI</li>
+                    <li class="text-lg font-medium text-gray-800 hover:text-primary cursor-pointer border-b-2 border-transparent hover:border-primary transition-colors mx-3" data-filter=".web">Web</li>
                 </ul>
             </div>
         </div>
-        <div class="row g-4 portfolio-container wow fadeInUp" data-wow-delay="0.1s">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 portfolio-container wow fadeInUp" data-wow-delay="0.1s">
             <!-- Portfolio Website -->
-            <div class="col-lg-4 col-md-6 portfolio-item web">
-                <div class="portfolio-wrapper rounded overflow-hidden">
-                    <div class="portfolio-img overflow-hidden">
-                        <img class="img-fluid" src="./img/project-1.jpg" alt="Portfolio Website Project">
-                        <div class="portfolio-overlay">
-                            <div class="portfolio-content">
-                                <h4 class="text-white mb-3">Portfolio Website</h4>
-                                <p class="text-white mb-3">Modern portfolio website built with HTML, CSS, and JavaScript featuring responsive design and smooth animations.</p>
-                                <div class="portfolio-btn">
-                                    <a class="btn btn-lg-square btn-outline-light border-2 mx-1" href="./img/project-1.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                    <a class="btn btn-lg-square btn-outline-light border-2 mx-1" href="https://github.com/dipesh227/dipeshjoshi"><i class="fa fa-link"></i></a>
+            <div class="portfolio-item web">
+                <div class="rounded-lg overflow-hidden shadow-lg group">
+                    <div class="relative overflow-hidden">
+                        <img class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110" src="./img/project-1.jpg" alt="Portfolio Website Project">
+                        <div class="absolute inset-0 bg-primary/90 flex flex-col justify-end p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                            <div class="text-white">
+                                <h4 class="text-xl font-bold mb-3">Portfolio Website</h4>
+                                <p class="mb-3">Modern portfolio website built with HTML, CSS, and JavaScript featuring responsive design and smooth animations.</p>
+                                <div class="flex items-center gap-2">
+                                    <a class="w-10 h-10 border-2 border-white rounded-lg flex items-center justify-center text-white hover:bg-white hover:text-primary transition-colors" href="./img/project-1.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                                    <a class="w-10 h-10 border-2 border-white rounded-lg flex items-center justify-center text-white hover:bg-white hover:text-primary transition-colors" href="https://github.com/dipesh227/dipeshjoshi"><i class="fa fa-link"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -34,17 +34,17 @@
             </div>
 
             <!-- Bootstrap Theme -->
-            <div class="col-lg-4 col-md-6 portfolio-item web">
-                <div class="portfolio-wrapper rounded overflow-hidden">
-                    <div class="portfolio-img overflow-hidden">
-                        <img class="img-fluid" src="./img/project-2.jpg" alt="Bootstrap Theme Project">
-                        <div class="portfolio-overlay">
-                            <div class="portfolio-content">
-                                <h4 class="text-white mb-3">Bootstrap Theme</h4>
-                                <p class="text-white mb-3">Custom Bootstrap 5 theme with dark mode support and responsive components.</p>
-                                <div class="portfolio-btn">
-                                    <a class="btn btn-lg-square btn-outline-light border-2 mx-1" href="./img/project-2.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                    <a class="btn btn-lg-square btn-outline-light border-2 mx-1" href="https://github.com/dipesh227/Bootstrap-HTML-Template"><i class="fa fa-link"></i></a>
+            <div class="portfolio-item web">
+                <div class="rounded-lg overflow-hidden shadow-lg group">
+                    <div class="relative overflow-hidden">
+                        <img class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110" src="./img/project-2.jpg" alt="Bootstrap Theme Project">
+                        <div class="absolute inset-0 bg-primary/90 flex flex-col justify-end p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                            <div class="text-white">
+                                <h4 class="text-xl font-bold mb-3">Bootstrap Theme</h4>
+                                <p class="mb-3">Custom Bootstrap 5 theme with dark mode support and responsive components.</p>
+                                <div class="flex items-center gap-2">
+                                    <a class="w-10 h-10 border-2 border-white rounded-lg flex items-center justify-center text-white hover:bg-white hover:text-primary transition-colors" href="./img/project-2.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                                    <a class="w-10 h-10 border-2 border-white rounded-lg flex items-center justify-center text-white hover:bg-white hover:text-primary transition-colors" href="https://github.com/dipesh227/Bootstrap-HTML-Template"><i class="fa fa-link"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -53,17 +53,17 @@
             </div>
 
             <!-- Phone Directory -->
-            <div class="col-lg-4 col-md-6 portfolio-item web">
-                <div class="portfolio-wrapper rounded overflow-hidden">
-                    <div class="portfolio-img overflow-hidden">
-                        <img class="img-fluid" src="./img/project-3.jpg" alt="Phone Directory Project">
-                        <div class="portfolio-overlay">
-                            <div class="portfolio-content">
-                                <h4 class="text-white mb-3">Phone Directory</h4>
-                                <p class="text-white mb-3">A PHP-based phone directory management system with CRUD operations and search functionality.</p>
-                                <div class="portfolio-btn">
-                                    <a class="btn btn-lg-square btn-outline-light border-2 mx-1" href="./img/project-3.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                    <a class="btn btn-lg-square btn-outline-light border-2 mx-1" href="https://github.com/dipesh227/phone-directory"><i class="fa fa-link"></i></a>
+            <div class="portfolio-item web">
+                <div class="rounded-lg overflow-hidden shadow-lg group">
+                    <div class="relative overflow-hidden">
+                        <img class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110" src="./img/project-3.jpg" alt="Phone Directory Project">
+                        <div class="absolute inset-0 bg-primary/90 flex flex-col justify-end p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                            <div class="text-white">
+                                <h4 class="text-xl font-bold mb-3">Phone Directory</h4>
+                                <p class="mb-3">A PHP-based phone directory management system with CRUD operations and search functionality.</p>
+                                <div class="flex items-center gap-2">
+                                    <a class="w-10 h-10 border-2 border-white rounded-lg flex items-center justify-center text-white hover:bg-white hover:text-primary transition-colors" href="./img/project-3.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                                    <a class="w-10 h-10 border-2 border-white rounded-lg flex items-center justify-center text-white hover:bg-white hover:text-primary transition-colors" href="https://github.com/dipesh227/phone-directory"><i class="fa fa-link"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -72,17 +72,17 @@
             </div>
 
             <!-- Weather App -->
-            <div class="col-lg-4 col-md-6 portfolio-item web">
-                <div class="portfolio-wrapper rounded overflow-hidden">
-                    <div class="portfolio-img overflow-hidden">
-                        <img class="img-fluid" src="./img/project-4.jpg" alt="Weather App Project">
-                        <div class="portfolio-overlay">
-                            <div class="portfolio-content">
-                                <h4 class="text-white mb-3">Weather App</h4>
-                                <p class="text-white mb-3">React-based weather application with OpenWeather API integration and geolocation support.</p>
-                                <div class="portfolio-btn">
-                                    <a class="btn btn-lg-square btn-outline-light border-2 mx-1" href="./img/project-4.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                    <a class="btn btn-lg-square btn-outline-light border-2 mx-1" href="https://github.com/dipesh227/weather-app"><i class="fa fa-link"></i></a>
+            <div class="portfolio-item web">
+                <div class="rounded-lg overflow-hidden shadow-lg group">
+                    <div class="relative overflow-hidden">
+                        <img class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110" src="./img/project-4.jpg" alt="Weather App Project">
+                        <div class="absolute inset-0 bg-primary/90 flex flex-col justify-end p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                            <div class="text-white">
+                                <h4 class="text-xl font-bold mb-3">Weather App</h4>
+                                <p class="mb-3">React-based weather application with OpenWeather API integration and geolocation support.</p>
+                                <div class="flex items-center gap-2">
+                                    <a class="w-10 h-10 border-2 border-white rounded-lg flex items-center justify-center text-white hover:bg-white hover:text-primary transition-colors" href="./img/project-4.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                                    <a class="w-10 h-10 border-2 border-white rounded-lg flex items-center justify-center text-white hover:bg-white hover:text-primary transition-colors" href="https://github.com/dipesh227/weather-app"><i class="fa fa-link"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -90,18 +90,18 @@
                 </div>
             </div>
 
-            <!-- Industrial Training -->
-            <div class="col-lg-4 col-md-6 portfolio-item web">
-                <div class="portfolio-wrapper rounded overflow-hidden">
-                    <div class="portfolio-img overflow-hidden">
-                        <img class="img-fluid" src="./img/indrastial.png" alt="Industrial Training Project">
-                        <div class="portfolio-overlay">
-                            <div class="portfolio-content">
-                                <h4 class="text-white mb-3">Room Rent Management</h4>
-                                <p class="text-white mb-3">A comprehensive room rental management system developed during industrial training.</p>
-                                <div class="portfolio-btn">
-                                    <a class="btn btn-lg-square btn-outline-light border-2 mx-1" href="./img/indrastial.png" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                    <a class="btn btn-lg-square btn-outline-light border-2 mx-1" href="https://github.com/dipesh227/RoomRent"><i class="fa fa-link"></i></a>
+            <!-- Room Rent Management -->
+            <div class="portfolio-item web">
+                <div class="rounded-lg overflow-hidden shadow-lg group">
+                    <div class="relative overflow-hidden">
+                        <img class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110" src="./img/indrastial.png" alt="Industrial Training Project">
+                        <div class="absolute inset-0 bg-primary/90 flex flex-col justify-end p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                            <div class="text-white">
+                                <h4 class="text-xl font-bold mb-3">Room Rent Management</h4>
+                                <p class="mb-3">A comprehensive room rental management system developed during industrial training.</p>
+                                <div class="flex items-center gap-2">
+                                    <a class="w-10 h-10 border-2 border-white rounded-lg flex items-center justify-center text-white hover:bg-white hover:text-primary transition-colors" href="./img/indrastial.png" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                                    <a class="w-10 h-10 border-2 border-white rounded-lg flex items-center justify-center text-white hover:bg-white hover:text-primary transition-colors" href="https://github.com/dipesh227/RoomRent"><i class="fa fa-link"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -109,18 +109,18 @@
                 </div>
             </div>
 
-            <!-- Minor Project -->
-            <div class="col-lg-4 col-md-6 portfolio-item web">
-                <div class="portfolio-wrapper rounded overflow-hidden">
-                    <div class="portfolio-img overflow-hidden">
-                        <img class="img-fluid" src="./img/minor.png" alt="Minor Project">
-                        <div class="portfolio-overlay">
-                            <div class="portfolio-content">
-                                <h4 class="text-white mb-3">HVC Management</h4>
-                                <p class="text-white mb-3">A vehicle management system developed as a minor project.</p>
-                                <div class="portfolio-btn">
-                                    <a class="btn btn-lg-square btn-outline-light border-2 mx-1" href="./img/minor.png" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
-                                    <a class="btn btn-lg-square btn-outline-light border-2 mx-1" href="https://github.com/dipesh227/hvc"><i class="fa fa-link"></i></a>
+            <!-- HVC Management -->
+            <div class="portfolio-item web">
+                <div class="rounded-lg overflow-hidden shadow-lg group">
+                    <div class="relative overflow-hidden">
+                        <img class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110" src="./img/minor.png" alt="Minor Project">
+                        <div class="absolute inset-0 bg-primary/90 flex flex-col justify-end p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                            <div class="text-white">
+                                <h4 class="text-xl font-bold mb-3">HVC Management</h4>
+                                <p class="mb-3">A vehicle management system developed as a minor project.</p>
+                                <div class="flex items-center gap-2">
+                                    <a class="w-10 h-10 border-2 border-white rounded-lg flex items-center justify-center text-white hover:bg-white hover:text-primary transition-colors" href="./img/minor.png" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                                    <a class="w-10 h-10 border-2 border-white rounded-lg flex items-center justify-center text-white hover:bg-white hover:text-primary transition-colors" href="https://github.com/dipesh227/hvc"><i class="fa fa-link"></i></a>
                                 </div>
                             </div>
                         </div>
