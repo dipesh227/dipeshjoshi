@@ -1,11 +1,13 @@
 /********** Template CSS **********/
 :root {
-    --primary: #6244C5;
-    --secondary: #FFC448;
+    --primary: #2C9DF7;
+    --secondary: #FF5722;
     --light: #FAFAFB;
     --dark: #12141D;
-    --gradient-start: #6a11cb;
-    --gradient-end: #2575fc;
+    --background: #FFFFFF;
+    --text-color: #333333;
+    --link-color: #2C9DF7;
+    --link-hover-color: #FF5722;
 }
 
 .back-to-top {
