@@ -4,6 +4,8 @@
     --secondary: #FFC448;
     --light: #FAFAFB;
     --dark: #12141D;
+    --gradient-start: #6a11cb;
+    --gradient-end: #2575fc;
 }
 
 .back-to-top {
