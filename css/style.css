@@ -1,106 +1,139 @@
-/********** Custom CSS **********/
+/*
+* Custom CSS
+* Author: Dipesh Joshi
+* Version: 2.0
+*/
+
+/* CSS Variables */
 :root {
-    --primary: #2C9DF7;
-    --secondary: #FF5722;
-    --dark: #12141D;
+  --primary: #2C9DF7;
+  --secondary: #FF5722;
+  --dark: #12141D;
+  --white: #FFFFFF;
+  --transition-speed: 0.5s;
+  --border-radius: 100%;
+  --spacing-sm: 16px;
+  --spacing-md: 20px;
+  --spacing-lg: 28px;
 }
 
-/* Spinner */
+/* Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Loading Spinner */
 #spinner {
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity .5s ease-out, visibility 0s linear .5s;
-    z-index: 99999;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--transition-speed) ease-out, 
+              visibility 0s linear var(--transition-speed);
+  z-index: 99999;
 }
 
 #spinner.show {
-    transition: opacity .5s ease-out, visibility 0s linear 0s;
-    visibility: visible;
-    opacity: 1;
+  transition: opacity var(--transition-speed) ease-out, 
+              visibility 0s linear 0s;
+  visibility: visible;
+  opacity: 1;
 }
 
-/* Portfolio Overlay Animation */
+/* Portfolio Section */
 .portfolio-img {
-    position: relative;
+  position: relative;
+  overflow: hidden;
 }
 
 .portfolio-overlay {
-    transition: all 0.5s;
+  transition: all var(--transition-speed);
+  background: rgba(0, 0, 0, 0.7);
+  opacity: 0;
 }
 
 .portfolio-item:hover .portfolio-overlay {
-    padding-bottom: 30px !important;
+  padding-bottom: 30px !important;
+  opacity: 1;
 }
 
-/* Animation Timing */
+/* Typed Text Animation */
 .typed-cursor {
-    font-size: 30px;
-    color: var(--dark);
+  font-size: clamp(20px, 2vw, 30px);
+  color: var(--dark);
 }
 
-/* Play Button Animation */
+/* Play Button Component */
 .btn-play {
-    position: relative;
-    display: block;
-    box-sizing: content-box;
-    width: 16px;
-    height: 26px;
-    border-radius: 100%;
-    border: none;
-    outline: none !important;
-    padding: 18px 20px 20px 28px;
-    background: var(--primary);
+  position: relative;
+  display: block;
+  width: var(--spacing-sm);
+  height: 26px;
+  border-radius: var(--border-radius);
+  border: none;
+  outline: none !important;
+  padding: 18px var(--spacing-md) var(--spacing-md) var(--spacing-lg);
+  background: var(--primary);
 }
 
-.btn-play:before {
-    content: "";
-    position: absolute;
-    z-index: 0;
-    left: 50%;
-    top: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    display: block;
-    width: 60px;
-    height: 60px;
-    background: var(--primary);
-    border-radius: 100%;
-    animation: pulse-border 1500ms ease-out infinite;
+.btn-play::before,
+.btn-play::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  display: block;
+  width: 60px;
+  height: 60px;
+  border-radius: var(--border-radius);
 }
 
-.btn-play:after {
-    content: "";
-    position: absolute;
-    z-index: 1;
-    left: 50%;
-    top: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    display: block;
-    width: 60px;
-    height: 60px;
-    background: #FFFFFF;
-    border-radius: 100%;
-    transition: all 200ms;
+.btn-play::before {
+  z-index: 0;
+  background: var(--primary);
+  animation: pulse-border 1500ms ease-out infinite;
+}
+
+.btn-play::after {
+  z-index: 1;
+  background: var(--white);
+  transition: all 200ms;
 }
 
 .btn-play span {
-    display: block;
-    position: relative;
-    z-index: 3;
-    width: 0;
-    height: 0;
-    left: -1px;
-    border-left: 16px solid var(--primary);
-    border-top: 11px solid transparent;
-    border-bottom: 11px solid transparent;
+  display: block;
+  position: relative;
+  z-index: 3;
+  width: 0;
+  height: 0;
+  left: -1px;
+  border-left: var(--spacing-sm) solid var(--primary);
+  border-top: 11px solid transparent;
+  border-bottom: 11px solid transparent;
 }
 
+/* Animations */
 @keyframes pulse-border {
-    0% {
-        transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
-        opacity: 1;
-    }
-    100% {
-        transform: translateX(-50%) translateY(-50%) translateZ(0) scale(2);
-        opacity: 0;
-    }
+  0% {
+    transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-50%) translateY(-50%) translateZ(0) scale(2);
+    opacity: 0;
+  }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .btn-play {
+    padding: 15px var(--spacing-sm) var(--spacing-sm) var(--spacing-md);
+  }
+  
+  .btn-play::before,
+  .btn-play::after {
+    width: 50px;
+    height: 50px;
+  }
 }
