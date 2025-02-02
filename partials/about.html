@@ -1,89 +1,216 @@
 <!-- About Start -->
-<div class="container mx-auto py-24" id="about">
+<section class="container mx-auto py-16 lg:py-24" id="about">
     <div class="max-w-7xl mx-auto px-4">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <div class="wow fadeInUp" data-wow-delay="0.1s">
-                <div class="flex items-center mb-8">
-                    <div class="flex-shrink-0 text-center mr-6">
-                        <h1 class="text-7xl font-bold mb-0">01</h1>
-                        <h5 class="text-xl tracking-[0.3em]">Year</h5>
+            <!-- Left Column -->
+            <div class="space-y-8 wow fadeInUp" data-wow-delay="0.1s">
+                <!-- Experience Counter -->
+                <div class="bg-gray-50 dark:bg-gray-800 rounded-2xl p-6 transform hover:scale-105 transition-all duration-300">
+                    <div class="flex items-center">
+                        <div class="flex-shrink-0 text-center mr-6">
+                            <div class="relative">
+                                <h1 class="text-6xl md:text-7xl font-bold mb-0 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">01</h1>
+                                <h5 class="text-lg md:text-xl tracking-[0.3em] text-gray-600 dark:text-gray-300">Year</h5>
+                            </div>
+                        </div>
+                        <h3 class="text-xl md:text-2xl leading-relaxed mb-0">of working experience as a web developer</h3>
                     </div>
-                    <h3 class="text-2xl leading-relaxed mb-0">of working experience as a web developer</h3>
                 </div>
-                <p class="mb-6 text-gray-700">🌟 I'm a passionate Full Stack Developer specializing in the MERN Stack and Next.js. I love building scalable, modern, and user-friendly applications. Currently, I'm exploring AI-powered image generation and working on exciting projects that combine creativity and technology.</p>
+
+                <!-- About Description -->
+                <div class="prose prose-lg max-w-none">
+                    <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+                        🌟 I'm a passionate Full Stack Developer specializing in the MERN Stack and Next.js. I love building scalable, modern, and user-friendly applications. Currently, I'm exploring AI-powered image generation and working on exciting projects that combine creativity and technology.
+                    </p>
+                </div>
                 
-                <div class="mb-6">
-                    <h5 class="text-primary font-semibold mb-4">🔭 Current Focus</h5>
-                    <ul class="space-y-2">
-                        <li class="flex items-center"><i class="fa fa-check-circle text-primary mr-2"></i>Working on AI-powered image generation projects</li>
-                        <li class="flex items-center"><i class="fa fa-check-circle text-primary mr-2"></i>Learning advanced AI/ML techniques</li>
-                        <li class="flex items-center"><i class="fa fa-check-circle text-primary mr-2"></i>Exploring cloud-native development</li>
+                <!-- Current Focus -->
+                <div class="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+                    <h5 class="text-primary font-semibold text-lg mb-4 flex items-center">
+                        <span class="text-2xl mr-2">🔭</span>
+                        Current Focus
+                    </h5>
+                    <ul class="space-y-3">
+                        <li class="flex items-center group">
+                            <span class="inline-flex items-center justify-center w-6 h-6 mr-3 rounded-full bg-primary/10 text-primary transition-all group-hover:scale-110">
+                                <i class="fa fa-check-circle"></i>
+                            </span>
+                            Working on AI-powered image generation projects
+                        </li>
+                        <li class="flex items-center group">
+                            <span class="inline-flex items-center justify-center w-6 h-6 mr-3 rounded-full bg-primary/10 text-primary transition-all group-hover:scale-110">
+                                <i class="fa fa-check-circle"></i>
+                            </span>
+                            Learning advanced AI/ML techniques
+                        </li>
+                        <li class="flex items-center group">
+                            <span class="inline-flex items-center justify-center w-6 h-6 mr-3 rounded-full bg-primary/10 text-primary transition-all group-hover:scale-110">
+                                <i class="fa fa-check-circle"></i>
+                            </span>
+                            Exploring cloud-native development
+                        </li>
                     </ul>
                 </div>
 
-                <div class="mb-6">
-                    <h5 class="text-primary font-semibold mb-4">📍 Location & Contact</h5>
-                    <div class="space-y-2">
-                        <p class="flex items-center"><i class="fa fa-map-marker-alt text-primary mr-2"></i>Khatima, U.S.Nagar, Uttarakhand</p>
-                        <p class="flex items-center"><i class="fa fa-envelope text-primary mr-2"></i>dipeshjoshi227@gmail.com</p>
-                        <p class="flex items-center"><i class="fa fa-phone text-primary mr-2"></i>+91 86304 84930</p>
+                <!-- Contact Information -->
+                <div class="bg-gray-50 dark:bg-gray-800 rounded-2xl p-6">
+                    <h5 class="text-primary font-semibold text-lg mb-4 flex items-center">
+                        <span class="text-2xl mr-2">📍</span>
+                        Location & Contact
+                    </h5>
+                    <div class="space-y-3">
+                        <a href="https://maps.google.com/?q=Khatima,U.S.Nagar,Uttarakhand" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           class="flex items-center group hover:text-primary transition-colors">
+                            <span class="inline-flex items-center justify-center w-6 h-6 mr-3 rounded-full bg-primary/10 text-primary">
+                                <i class="fa fa-map-marker-alt"></i>
+                            </span>
+                            Khatima, U.S.Nagar, Uttarakhand
+                        </a>
+                        <a href="mailto:dipeshjoshi227@gmail.com" 
+                           class="flex items-center group hover:text-primary transition-colors">
+                            <span class="inline-flex items-center justify-center w-6 h-6 mr-3 rounded-full bg-primary/10 text-primary">
+                                <i class="fa fa-envelope"></i>
+                            </span>
+                            dipeshjoshi227@gmail.com
+                        </a>
+                        <a href="tel:+918630484930" 
+                           class="flex items-center group hover:text-primary transition-colors">
+                            <span class="inline-flex items-center justify-center w-6 h-6 mr-3 rounded-full bg-primary/10 text-primary">
+                                <i class="fa fa-phone"></i>
+                            </span>
+                            +91 86304 84930
+                        </a>
                     </div>
                 </div>
             </div>
-            <div class="wow fadeInUp" data-wow-delay="0.5s">
-                <div class="flex items-center mb-4">
-                    <h5 class="border-r pr-3 mr-3 mb-0 font-semibold">PERSONAL TRAITS</h5>
+
+            <!-- Right Column -->
+            <div class="space-y-8 wow fadeInUp" data-wow-delay="0.5s">
+                <!-- Personal Traits -->
+                <div class="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg">
+                    <h5 class="inline-flex items-center px-4 py-2 bg-primary/10 text-primary rounded-full mb-6">
+                        PERSONAL TRAITS
+                    </h5>
+                    <ul class="space-y-3">
+                        <li class="flex items-center group">
+                            <span class="inline-flex items-center justify-center w-6 h-6 mr-3 rounded-full bg-primary/10 text-primary transition-all group-hover:scale-110">
+                                <i class="fa fa-check"></i>
+                            </span>
+                            Good team management and leadership skills
+                        </li>
+                        <li class="flex items-center group">
+                            <span class="inline-flex items-center justify-center w-6 h-6 mr-3 rounded-full bg-primary/10 text-primary transition-all group-hover:scale-110">
+                                <i class="fa fa-check"></i>
+                            </span>
+                            Strong problem-solving abilities
+                        </li>
+                        <li class="flex items-center group">
+                            <span class="inline-flex items-center justify-center w-6 h-6 mr-3 rounded-full bg-primary/10 text-primary transition-all group-hover:scale-110">
+                                <i class="fa fa-check"></i>
+                            </span>
+                            Excellent communication skills
+                        </li>
+                        <li class="flex items-center group">
+                            <span class="inline-flex items-center justify-center w-6 h-6 mr-3 rounded-full bg-primary/10 text-primary transition-all group-hover:scale-110">
+                                <i class="fa fa-check"></i>
+                            </span>
+                            Adaptable to diverse environments
+                        </li>
+                        <li class="flex items-center group">
+                            <span class="inline-flex items-center justify-center w-6 h-6 mr-3 rounded-full bg-primary/10 text-primary transition-all group-hover:scale-110">
+                                <i class="fa fa-check"></i>
+                            </span>
+                            Works well under pressure
+                        </li>
+                    </ul>
                 </div>
-                <ul class="space-y-2 mb-8">
-                    <li class="flex items-center"><i class="fa fa-check text-primary mr-2"></i>Good team management and leadership skills</li>
-                    <li class="flex items-center"><i class="fa fa-check text-primary mr-2"></i>Strong problem-solving abilities</li>
-                    <li class="flex items-center"><i class="fa fa-check text-primary mr-2"></i>Excellent communication skills</li>
-                    <li class="flex items-center"><i class="fa fa-check text-primary mr-2"></i>Adaptable to diverse environments</li>
-                    <li class="flex items-center"><i class="fa fa-check text-primary mr-2"></i>Works well under pressure</li>
-                </ul>
-                
-                <hr class="my-8 border-gray-200">
-                
-                <div class="flex items-center mb-4">
-                    <h5 class="border-r pr-3 mr-3 mb-0 font-semibold">INTERESTS</h5>
-                </div>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    <div>
-                        <ul class="space-y-2">
-                            <li class="flex items-center"><i class="fa fa-laptop-code text-primary mr-2"></i>Coding</li>
-                            <li class="flex items-center"><i class="fa fa-blog text-primary mr-2"></i>Blogging</li>
-                            <li class="flex items-center"><i class="fa fa-music text-primary mr-2"></i>Music</li>
-                            <li class="flex items-center"><i class="fa fa-map-marked text-primary mr-2"></i>Exploring</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <ul class="space-y-2">
-                            <li class="flex items-center"><i class="fa fa-hands-helping text-primary mr-2"></i>Volunteerism</li>
-                            <li class="flex items-center"><i class="fa fa-theater-masks text-primary mr-2"></i>Performing</li>
-                            <li class="flex items-center"><i class="fa fa-rocket text-primary mr-2"></i>New Technologies</li>
-                        </ul>
+
+                <!-- Interests -->
+                <div class="bg-gray-50 dark:bg-gray-800 rounded-2xl p-6">
+                    <h5 class="inline-flex items-center px-4 py-2 bg-primary/10 text-primary rounded-full mb-6">
+                        INTERESTS
+                    </h5>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div class="space-y-3">
+                            <div class="flex items-center group">
+                                <span class="inline-flex items-center justify-center w-8 h-8 mr-3 rounded-lg bg-primary/10 text-primary transition-all group-hover:scale-110">
+                                    <i class="fa fa-laptop-code"></i>
+                                </span>
+                                <span>Coding</span>
+                            </div>
+                            <div class="flex items-center group">
+                                <span class="inline-flex items-center justify-center w-8 h-8 mr-3 rounded-lg bg-primary/10 text-primary transition-all group-hover:scale-110">
+                                    <i class="fa fa-blog"></i>
+                                </span>
+                                <span>Blogging</span>
+                            </div>
+                            <div class="flex items-center group">
+                                <span class="inline-flex items-center justify-center w-8 h-8 mr-3 rounded-lg bg-primary/10 text-primary transition-all group-hover:scale-110">
+                                    <i class="fa fa-music"></i>
+                                </span>
+                                <span>Music</span>
+                            </div>
+                            <div class="flex items-center group">
+                                <span class="inline-flex items-center justify-center w-8 h-8 mr-3 rounded-lg bg-primary/10 text-primary transition-all group-hover:scale-110">
+                                    <i class="fa fa-map-marked"></i>
+                                </span>
+                                <span>Exploring</span>
+                            </div>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="flex items-center group">
+                                <span class="inline-flex items-center justify-center w-8 h-8 mr-3 rounded-lg bg-primary/10 text-primary transition-all group-hover:scale-110">
+                                    <i class="fa fa-hands-helping"></i>
+                                </span>
+                                <span>Volunteerism</span>
+                            </div>
+                            <div class="flex items-center group">
+                                <span class="inline-flex items-center justify-center w-8 h-8 mr-3 rounded-lg bg-primary/10 text-primary transition-all group-hover:scale-110">
+                                    <i class="fa fa-theater-masks"></i>
+                                </span>
+                                <span>Performing</span>
+                            </div>
+                            <div class="flex items-center group">
+                                <span class="inline-flex items-center justify-center w-8 h-8 mr-3 rounded-lg bg-primary/10 text-primary transition-all group-hover:scale-110">
+                                    <i class="fa fa-rocket"></i>
+                                </span>
+                                <span>New Technologies</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <hr class="my-8 border-gray-200">
-
-                <div class="flex items-center mb-4">
-                    <h5 class="border-r pr-3 mr-3 mb-0 font-semibold">Achievements</h5>
+                <!-- Achievements -->
+                <div class="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg">
+                    <h5 class="inline-flex items-center px-4 py-2 bg-primary/10 text-primary rounded-full mb-6">
+                        ACHIEVEMENTS
+                    </h5>
+                    <ul class="space-y-4">
+                        <li class="flex items-center group">
+                            <span class="inline-flex items-center justify-center w-8 h-8 mr-3 rounded-lg bg-primary/10 text-primary transition-all group-hover:scale-110">
+                                <i class="fa fa-trophy"></i>
+                            </span>
+                            <div>
+                                <span class="font-semibold">Projects Completed: </span>
+                                <span class="text-primary" data-toggle="counter-up">10</span>
+                                <span class="text-primary">+</span>
+                            </div>
+                        </li>
+                        <li class="flex items-center group">
+                            <span class="inline-flex items-center justify-center w-8 h-8 mr-3 rounded-lg bg-primary/10 text-primary transition-all group-hover:scale-110">
+                                <i class="fa fa-award"></i>
+                            </span>
+                            <div>
+                                <span class="font-semibold">Hackathon Participant</span>
+                                <span class="text-gray-600 dark:text-gray-400"> - Zonal Level</span>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
-                <ul class="space-y-3">
-                    <li class="flex items-center">
-                        <i class="fa fa-trophy text-primary mr-2"></i>
-                        <span class="font-semibold">Projects Completed:</span>
-                        <span class="text-primary ml-2" data-toggle="counter-up">10</span>+
-                    </li>
-                    <li class="flex items-center">
-                        <i class="fa fa-award text-primary mr-2"></i>
-                        <span class="font-semibold">Hackathon Participant</span>
-                        <span class="ml-2">- Zonal Level</span>
-                    </li>
-                </ul>
             </div>
         </div>
     </div>
-</div>
+</section>
 <!-- About End -->

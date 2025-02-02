@@ -1,31 +1,112 @@
 <!-- Header Start -->
-<div class="relative bg-gray-50 my-24 mt-0" id="home">
-    <div class="absolute inset-0 bg-cover bg-center opacity-10 z-[1]" style="background-image: url('../img/bg-header.png')"></div>
-    <div class="container mx-auto relative z-[2]">
+<header class="relative min-h-screen flex items-center" id="home">
+    <div class="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent dark:from-primary/10 dark:to-transparent">
+        <div class="absolute inset-0 bg-[url('../img/bg-header.png')] bg-cover bg-center opacity-10 dark:opacity-5"></div>
+    </div>
+
+    <div class="container relative z-10 pt-24 pb-12 md:py-16 lg:py-24">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div class="py-6 lg:py-0">
-                <h3 class="text-primary mb-3">Hello, I'm</h3>
-                <h1 class="text-5xl lg:text-6xl font-bold mb-3">Dipesh Joshi</h1>
-                <h2 class="typed-text-output inline"></h2>
-                <div class="typed-text hidden">
-                    Full Stack Developer, MERN Developer, Next.js Developer, AI Enthusiast, Web Developer
+            <!-- Text Content -->
+            <div class="space-y-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="space-y-4">
+                    <span class="inline-block text-primary font-semibold text-lg md:text-xl animate-slide-down">
+                        Hello, I'm
+                    </span>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-dark dark:text-light animate-slide-up">
+                        Dipesh Joshi
+                    </h1>
+                    <div class="relative h-12">
+                        <span class="typed-text-output inline-block text-xl md:text-2xl lg:text-3xl text-primary font-semibold" 
+                              aria-live="polite"></span>
+                        <div class="typed-text hidden">
+                            Full Stack Developer, MERN Developer, Next.js Developer, AI Enthusiast, Web Developer
+                        </div>
+                    </div>
                 </div>
-                <p class="mb-4 mt-4">🌟 Passionate Full Stack Developer specializing in MERN Stack and Next.js</p>
-                <div class="flex items-center pt-5">
-                    <a href="../Resume.pdf" target="_blank" class="bg-primary hover:bg-primary/90 text-white py-3 px-4 rounded-lg mr-5 transition-colors">Download CV</a>
-                    <button type="button" class="btn-play" data-bs-toggle="modal" data-src="https://www.youtube.com/embed/qYWDQYXxOAg" data-bs-target="#videoModal">
-                        <span></span>
-                    </button>
-                    <h5 class="ml-4 mb-0 hidden sm:block">Play Video</h5>
+
+                <p class="text-lg md:text-xl text-gray-700 dark:text-gray-300 max-w-2xl animate-fade-in">
+                    🌟 Passionate Full Stack Developer specializing in MERN Stack and Next.js with expertise in creating modern, scalable web applications
+                </p>
+
+                <div class="flex flex-wrap items-center gap-6 pt-4 animate-slide-up">
+                    <a href="../Resume.pdf" 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       class="inline-flex items-center px-6 py-3 bg-primary hover:bg-primary-dark text-white rounded-lg transition-all hover:transform hover:scale-105 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 dark:focus:ring-offset-gray-800">
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+                        </svg>
+                        Download CV
+                    </a>
+
+                    <div class="flex items-center gap-4">
+                        <button type="button" 
+                                class="btn-play group"
+                                data-bs-toggle="modal" 
+                                data-src="https://www.youtube.com/embed/qYWDQYXxOAg" 
+                                data-bs-target="#videoModal"
+                                aria-label="Play introduction video">
+                            <span class="transition-transform group-hover:scale-110"></span>
+                        </button>
+                        <span class="hidden sm:block text-lg text-gray-700 dark:text-gray-300">Watch Video</span>
+                    </div>
+                </div>
+
+                <!-- Social Links -->
+                <div class="flex items-center gap-4 pt-6">
+                    <a href="https://github.com/dipeshxtha94" 
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="text-gray-600 hover:text-primary dark:text-gray-400 dark:hover:text-primary transition-colors"
+                       aria-label="GitHub Profile">
+                        <i class="fab fa-github text-2xl"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/dipesh-joshi-3234b723a" 
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="text-gray-600 hover:text-primary dark:text-gray-400 dark:hover:text-primary transition-colors"
+                       aria-label="LinkedIn Profile">
+                        <i class="fab fa-linkedin text-2xl"></i>
+                    </a>
                 </div>
             </div>
-            <div class="relative">
-                <img class="w-full rounded-lg shadow-xl" src="../img/profile.png" alt="Dipesh Joshi Profile">
-                <div class="absolute -top-4 -right-4">
-                    <img src="../img/bg-icon.png" class="w-24 h-24" alt="Background Icon">
+
+            <!-- Profile Image -->
+            <div class="relative mt-8 lg:mt-0 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="relative group">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-primary to-secondary rounded-xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
+                    <div class="relative">
+                        <picture>
+                            <source srcset="../img/profile.webp" type="image/webp">
+                            <img class="w-full max-w-lg mx-auto rounded-xl shadow-2xl transform group-hover:scale-[1.01] transition-transform duration-500" 
+                                 src="../img/profile.png" 
+                                 alt="Profile photo of Dipesh Joshi"
+                                 width="600"
+                                 height="600"
+                                 loading="eager">
+                        </picture>
+                    </div>
+                </div>
+
+                <!-- Floating Icon -->
+                <div class="absolute -top-4 -right-4 animate-bounce">
+                    <img src="../img/bg-icon.png" 
+                         class="w-16 h-16 md:w-24 md:h-24" 
+                         alt=""
+                         aria-hidden="true"
+                         loading="lazy">
                 </div>
             </div>
         </div>
     </div>
-</div>
+
+    <!-- Scroll Indicator -->
+    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce hidden md:block">
+        <a href="#about" 
+           class="text-primary dark:text-primary-light transition-colors"
+           aria-label="Scroll to about section">
+            <i class="fas fa-chevron-down text-2xl"></i>
+        </a>
+    </div>
+</header>
 <!-- Header End -->

@@ -1,37 +1,187 @@
 <!-- Navbar Start -->
-<nav class="fixed top-0 w-full bg-white shadow-md py-2 px-4 lg:px-5 wow fadeIn" data-wow-delay="0.1s">
+<nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm shadow-md transition-all duration-300" 
+     id="mainNav"
+     aria-label="Main navigation">
     <div class="container mx-auto">
-        <div class="flex items-center justify-between">
+        <div class="flex items-center justify-between h-16 md:h-20">
             <!-- Mobile Logo -->
-            <a href="index.html" class="lg:hidden">
-                <h1 class="text-primary font-bold text-2xl m-0">DIPESH JOSHI</h1>
+            <a href="./" 
+               class="flex items-center lg:hidden"
+               aria-label="Dipesh Joshi - Home">
+                <h1 class="text-primary dark:text-primary-light font-bold text-2xl transition-transform hover:scale-105">
+                    DIPESH JOSHI
+                </h1>
             </a>
             
             <!-- Mobile Menu Button -->
-            <button type="button" class="lg:hidden text-gray-600 hover:text-gray-900 focus:outline-none" onclick="document.getElementById('navMenu').classList.toggle('hidden')">
-                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            <button type="button" 
+                    class="lg:hidden inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-primary hover:bg-gray-100 dark:text-gray-300 dark:hover:text-primary dark:hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 dark:focus:ring-offset-gray-900 transition-all"
+                    aria-controls="navMenu"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation menu"
+                    onclick="toggleMobileMenu(this)">
+                <svg class="h-6 w-6" 
+                     fill="none" 
+                     stroke="currentColor" 
+                     viewBox="0 0 24 24"
+                     aria-hidden="true">
+                    <path class="menu-icon" 
+                          stroke-linecap="round" 
+                          stroke-linejoin="round" 
+                          stroke-width="2" 
+                          d="M4 6h16M4 12h16M4 18h16"/>
+                    <path class="close-icon hidden" 
+                          stroke-linecap="round" 
+                          stroke-linejoin="round" 
+                          stroke-width="2" 
+                          d="M6 18L18 6M6 6l12 12"/>
                 </svg>
             </button>
 
             <!-- Desktop/Mobile Menu -->
-            <div id="navMenu" class="hidden lg:flex flex-col lg:flex-row justify-between items-center w-full lg:w-auto">
-                <div class="flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-8 py-4 lg:py-0">
-                    <a href="#about" class="text-gray-700 hover:text-primary text-lg font-semibold transition-colors">About</a>
-                    <a href="#skill" class="text-gray-700 hover:text-primary text-lg font-semibold transition-colors">Skills</a>
+            <div id="navMenu" 
+                 class="hidden lg:flex flex-col lg:flex-row justify-between items-center w-full lg:w-auto absolute lg:relative top-full left-0 bg-white/95 dark:bg-gray-900/95 lg:bg-transparent shadow-md lg:shadow-none mt-2 lg:mt-0 transition-all duration-300"
+                 role="navigation">
+                <div class="flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-8 py-4 lg:py-0 px-4 lg:px-0 w-full lg:w-auto">
+                    <a href="#about" 
+                       class="nav-link text-gray-700 hover:text-primary dark:text-gray-300 dark:hover:text-primary text-lg font-semibold transition-all hover:translate-x-1 lg:hover:translate-x-0 lg:hover:scale-105"
+                       aria-label="About section">About</a>
+                    <a href="#skill" 
+                       class="nav-link text-gray-700 hover:text-primary dark:text-gray-300 dark:hover:text-primary text-lg font-semibold transition-all hover:translate-x-1 lg:hover:translate-x-0 lg:hover:scale-105"
+                       aria-label="Skills section">Skills</a>
                 </div>
                 
                 <!-- Desktop Logo -->
-                <a href="./" class="hidden lg:block bg-gray-100 py-3 px-4 mx-8">
-                    <h1 class="text-primary font-bold text-2xl m-0">DIPESH JOSHI</h1>
+                <a href="./" 
+                   class="hidden lg:flex items-center px-6 py-2 bg-gray-100 dark:bg-gray-800 rounded-xl mx-8 group transition-all hover:bg-gray-200 dark:hover:bg-gray-700"
+                   aria-label="Dipesh Joshi - Home">
+                    <h1 class="text-primary dark:text-primary-light font-bold text-2xl transition-transform group-hover:scale-105">
+                        DIPESH JOSHI
+                    </h1>
                 </a>
                 
-                <div class="flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-8 py-4 lg:py-0">
-                    <a href="#project" class="text-gray-700 hover:text-primary text-lg font-semibold transition-colors">Projects</a>
-                    <a href="#contact" class="text-gray-700 hover:text-primary text-lg font-semibold transition-colors">Contact</a>
+                <div class="flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-8 py-4 lg:py-0 px-4 lg:px-0 w-full lg:w-auto">
+                    <a href="#project" 
+                       class="nav-link text-gray-700 hover:text-primary dark:text-gray-300 dark:hover:text-primary text-lg font-semibold transition-all hover:translate-x-1 lg:hover:translate-x-0 lg:hover:scale-105"
+                       aria-label="Projects section">Projects</a>
+                    <a href="#contact" 
+                       class="nav-link text-gray-700 hover:text-primary dark:text-gray-300 dark:hover:text-primary text-lg font-semibold transition-all hover:translate-x-1 lg:hover:translate-x-0 lg:hover:scale-105"
+                       aria-label="Contact section">Contact</a>
                 </div>
+
+                <!-- Theme Toggle -->
+                <button type="button"
+                        id="themeToggle"
+                        class="fixed bottom-4 right-4 lg:static p-2 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 dark:focus:ring-offset-gray-900"
+                        aria-label="Toggle dark mode">
+                    <svg class="w-6 h-6 sun-icon" 
+                         fill="none" 
+                         stroke="currentColor" 
+                         viewBox="0 0 24 24"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" 
+                              stroke-linejoin="round" 
+                              stroke-width="2" 
+                              d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z">
+                        </path>
+                    </svg>
+                    <svg class="w-6 h-6 moon-icon hidden" 
+                         fill="none" 
+                         stroke="currentColor" 
+                         viewBox="0 0 24 24"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" 
+                              stroke-linejoin="round" 
+                              stroke-width="2" 
+                              d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z">
+                        </path>
+                    </svg>
+                </button>
             </div>
         </div>
     </div>
 </nav>
+
+<!-- Navigation Script -->
+<script>
+// Mobile Menu Toggle
+function toggleMobileMenu(button) {
+    const menu = document.getElementById('navMenu');
+    const expanded = menu.classList.contains('hidden') ? 'false' : 'true';
+    button.setAttribute('aria-expanded', expanded);
+    
+    if (menu.classList.contains('hidden')) {
+        menu.classList.remove('hidden');
+        document.querySelector('.menu-icon').classList.add('hidden');
+        document.querySelector('.close-icon').classList.remove('hidden');
+    } else {
+        menu.classList.add('hidden');
+        document.querySelector('.menu-icon').classList.remove('hidden');
+        document.querySelector('.close-icon').classList.add('hidden');
+    }
+}
+
+// Theme Toggle
+const themeToggle = document.getElementById('themeToggle');
+const sunIcon = themeToggle.querySelector('.sun-icon');
+const moonIcon = themeToggle.querySelector('.moon-icon');
+
+// Check system preference and localStorage
+const systemDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+const storedTheme = localStorage.getItem('theme');
+const isDark = storedTheme === 'dark' || (!storedTheme && systemDarkMode);
+
+// Initial theme setup
+if (isDark) {
+    document.documentElement.classList.add('dark');
+    sunIcon.classList.add('hidden');
+    moonIcon.classList.remove('hidden');
+}
+
+// Theme toggle handler
+themeToggle.addEventListener('click', () => {
+    document.documentElement.classList.toggle('dark');
+    sunIcon.classList.toggle('hidden');
+    moonIcon.classList.toggle('hidden');
+    
+    const currentTheme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
+    localStorage.setItem('theme', currentTheme);
+});
+
+// Close mobile menu when clicking outside
+document.addEventListener('click', (e) => {
+    const menu = document.getElementById('navMenu');
+    const button = document.querySelector('[aria-controls="navMenu"]');
+    
+    if (!menu.contains(e.target) && !button.contains(e.target) && !menu.classList.contains('hidden')) {
+        toggleMobileMenu(button);
+    }
+});
+
+// Scrollspy and nav highlight
+const navLinks = document.querySelectorAll('.nav-link');
+const sections = document.querySelectorAll('section[id]');
+const navHeight = document.querySelector('#mainNav').offsetHeight;
+
+function highlightNavLink() {
+    const scrollPos = window.scrollY + navHeight + 100;
+
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
+        const sectionId = section.getAttribute('id');
+        
+        if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+            navLinks.forEach(link => {
+                link.classList.remove('text-primary', 'dark:text-primary-light');
+                if (link.getAttribute('href').slice(1) === sectionId) {
+                    link.classList.add('text-primary', 'dark:text-primary-light');
+                }
+            });
+        }
+    });
+}
+
+window.addEventListener('scroll', highlightNavLink);
+</script>
 <!-- Navbar End -->
